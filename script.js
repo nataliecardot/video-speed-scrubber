@@ -13,7 +13,7 @@ function handleMove(e) {
   const min = 0.5;
   const max = 3.51;
   const height = Math.round(proportion * 100) + '%';
-  const playbackRate = proportion * (max - min) + min;
+  const playbackRate = min + proportion * (max - min);
   bar.style.height = height;
   bar.textContent = playbackRate.toFixed(2) + '×';
   video.playbackRate = playbackRate;
