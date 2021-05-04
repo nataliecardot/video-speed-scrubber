@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #4c4c4c url('https://unsplash.it/1500/900?image=1021');
+  background: #212121;
   background-size: cover;
   font-family: sans-serif;
 }
