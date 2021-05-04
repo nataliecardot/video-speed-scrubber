@@ -2,7 +2,6 @@ const speed = document.querySelector('.speed');
 const bar = speed.querySelector('.speed-bar');
 const video = document.querySelector('.flex');
 
-// Using regular function so `this` is speed bar (element on which event triggered) - with an arrow function, since they use lexical scoping, `this` is inherited from parent scope (it would be Window)
 function handleMove(e) {
   // pageY: y-coord of mouse event relative to entire document
   // offsetTop: distance between top position (px) of current element relative to offsetParent element (nearest positioned ancestor - if none, the nearest ancestor table element - if none, body)
