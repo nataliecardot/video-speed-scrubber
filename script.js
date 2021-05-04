@@ -8,13 +8,14 @@ speed.addEventListener('mousemove', function (e) {
   // offsetTop: distance between top position (px) of current element relative to offsetParent element (nearest positioned ancestor - if none, the nearest ancestor table element - if none, body)
   // getting coord within speed bar (it will be 0 at top)
   const y = e.pageY - this.offsetTop;
-  console.log(y + ' is y, pageY - offsetTop');
   // offsetHeight: element's height including vertical padding and borders
-  console.log(this.offsetHeight);
   // So if mouse is hovered over middle of speed bar, percent will be 205 / 410 = 0.5
-  const percent = y / this.offsetHeight;
+  const proportion = y / this.offsetHeight;
+  console.log(proportion);
   const min = 0.5;
   const max = 3.5;
-  const height = Math.round(percent * 100) + '%';
+  const height = Math.round(proportion * 100) + '%';
+  const playbackRate = proportion * (max - min) + min;
   bar.style.height = height;
+  bar.textContent = playbackRate.toFixed(2);
 });
